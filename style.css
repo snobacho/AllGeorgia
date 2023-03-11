@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #0a0a0a;
+  width: 100%;
+  height: 100vh;
+}
 :root {
   --heading-collor: #F34E42;
   --black-color: #0a0a0a;
@@ -13,7 +18,8 @@
   width: 100%;
   height: 100vh;
   position: fixed;
-  display: flex;
+  /* display: flex; */         
+  display: none; /* !   display turnoff */
   place-items: center;
   justify-content: center;
   user-select: none;
@@ -62,4 +68,69 @@
 }
 .loader span:nth-child(10) {
     animation-delay: 0.9s;
+} 
+
+/* Allgeorgia text animation */
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 3;
+}
+
+#logo path:nth-child(2){  /*  first child is rect */
+  stroke-dashoffset: 362.75px;
+  stroke-dasharray: 362.75px;
+  animation: logo-txt-anim 2s ease forwards;
+}
+#logo path:nth-child(3){
+  stroke-dashoffset: 207.61px;
+  stroke-dasharray: 207.61px;
+  animation: logo-txt-anim 2s ease forwards;
+}
+#logo path:nth-child(4){
+  stroke-dashoffset: 207.61px;
+  stroke-dasharray: 207.61px;
+  animation: logo-txt-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(5){
+  stroke-dashoffset: 380.69px;
+  stroke-dasharray: 380.69px;
+  animation: logo-txt-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(6){
+  stroke-dashoffset: 315.15px;
+  stroke-dasharray: 315.15px;
+  animation: logo-txt-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(7){
+  stroke-dashoffset: 258.610px;
+  stroke-dasharray: 258.610px;
+  animation: logo-txt-anim 2s ease forwards 1.5s;
+}
+#logo path:nth-child(8){
+  stroke-dashoffset: 154.26px;
+  stroke-dasharray: 154.26px;
+  animation: logo-txt-anim 2s ease forwards 1.7s;
+}
+#logo path:nth-child(9){
+  stroke-dashoffset: 386.67px;
+  stroke-dasharray: 386.67px;
+  animation: logo-txt-anim 2s ease forwards 1.9s;
+}
+#logo path:nth-child(10){
+  stroke-dashoffset: 146.22px;
+  stroke-dasharray: 146.22px;
+  animation: logo-txt-anim 2s ease forwards 2.1s;
+}
+#logo path:nth-child(11){
+ stroke-dashoffset: 295.05px;
+ stroke-dasharray: 295.05px;
+ animation: logo-txt-anim 2s ease forwards 2.3s;
+}
+@keyframes logo-txt-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
