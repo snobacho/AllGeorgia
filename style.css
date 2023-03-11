@@ -85,6 +85,7 @@ body {
 .firs-page {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 /* Allgeorgia text - animation */
 .logo {
@@ -94,7 +95,7 @@ body {
   transform: translate(-50%, -50%);
   animation: fill 0.5s ease forwards 3;
   animation: logo-border 5s ease forwards;
-  padding: 0 0 0.15rem 0;
+  padding: 0 0 0.2rem 0;
 }
 
 .logo path:nth-child(2){  /* first child is rect */
@@ -197,6 +198,18 @@ body {
   height: 100vh;
   position: relative;
 }
-h1 { /*test */
+.about-wrapper {
+  width: 65%;
+}
+.about-para {
+  font-size: 8rem;
+  color: white;
+}
+.about-para span {
   color: var(--primary-color);
+  transition: hover 1s;
+}
+.about-para span:hover {
+  text-decoration: underline .3rem ;
+  transition: 5s;
 }
