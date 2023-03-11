@@ -2,14 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  font-size: 60%; 
+  scroll-behavior: smooth;
 }
 body {
   background-color: #0a0a0a;
   width: 100%;
   height: 100vh;
 }
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+::-webkit-scrollbar {
+  display: none;
+}
 :root {
-  --heading-collor: #F34E42;
+  --primary-color: #F34E42;
   --black-color: #0a0a0a;
 }
 /* * global styles end * */
@@ -20,8 +33,6 @@ body {
   position: fixed;
   /* display: flex; */         
   display: none; /* !   display turnoff */
-  place-items: center;
-  justify-content: center;
   user-select: none;
   background-color: #0a0a0a;
 }
@@ -33,11 +44,11 @@ body {
 
 @keyframes loading {
   0%{
-    text-shadow: 10px 0 70px var(--heading-collor);
+    text-shadow: 10px 0 70px var(--primary-color);
     color: white;
   }
   100%{
-    color: var(--heading-collor);
+    color: var(--primary-color);
       font-size: 4rem;
     }
   }
@@ -70,61 +81,68 @@ body {
     animation-delay: 0.9s;
 } 
 
-/* Allgeorgia text animation */
-#logo {
+
+.firs-page {
+  width: 100%;
+  height: 100vh;
+}
+/* Allgeorgia text - animation */
+.logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: fill 0.5s ease forwards 3;
+  animation: logo-border 5s ease forwards;
+  padding: 0 0 0.15rem 0;
 }
 
-#logo path:nth-child(2){  /*  first child is rect */
+.logo path:nth-child(2){  /* first child is rect */
   stroke-dashoffset: 362.75px;
   stroke-dasharray: 362.75px;
   animation: logo-txt-anim 2s ease forwards;
 }
-#logo path:nth-child(3){
+.logo path:nth-child(3){
   stroke-dashoffset: 207.61px;
   stroke-dasharray: 207.61px;
   animation: logo-txt-anim 2s ease forwards;
 }
-#logo path:nth-child(4){
+.logo path:nth-child(4){
   stroke-dashoffset: 207.61px;
   stroke-dasharray: 207.61px;
   animation: logo-txt-anim 2s ease forwards 0.3s;
 }
-#logo path:nth-child(5){
+.logo path:nth-child(5){
   stroke-dashoffset: 380.69px;
   stroke-dasharray: 380.69px;
   animation: logo-txt-anim 2s ease forwards 0.6s;
 }
-#logo path:nth-child(6){
+.logo path:nth-child(6){
   stroke-dashoffset: 315.15px;
   stroke-dasharray: 315.15px;
   animation: logo-txt-anim 2s ease forwards 1.2s;
 }
-#logo path:nth-child(7){
+.logo path:nth-child(7){
   stroke-dashoffset: 258.610px;
   stroke-dasharray: 258.610px;
   animation: logo-txt-anim 2s ease forwards 1.5s;
 }
-#logo path:nth-child(8){
+.logo path:nth-child(8){
   stroke-dashoffset: 154.26px;
   stroke-dasharray: 154.26px;
   animation: logo-txt-anim 2s ease forwards 1.7s;
 }
-#logo path:nth-child(9){
+.logo path:nth-child(9){
   stroke-dashoffset: 386.67px;
   stroke-dasharray: 386.67px;
   animation: logo-txt-anim 2s ease forwards 1.9s;
 }
-#logo path:nth-child(10){
+.logo path:nth-child(10){
   stroke-dashoffset: 146.22px;
   stroke-dasharray: 146.22px;
   animation: logo-txt-anim 2s ease forwards 2.1s;
 }
-#logo path:nth-child(11){
+.logo path:nth-child(11){
  stroke-dashoffset: 295.05px;
  stroke-dasharray: 295.05px;
  animation: logo-txt-anim 2s ease forwards 2.3s;
@@ -133,4 +151,52 @@ body {
   to {
     stroke-dashoffset: 0;
   }
+}
+@keyframes logo-border {
+  100%{box-shadow: 1px 1px #F34E42;}
+}
+
+.scroll-angle {
+  font-size: 5rem;
+  cursor: pointer;
+  animation: arrow-anime 4s ease-in-out infinite;
+  transition: font-size .5s;
+}
+.scroll-angle a{
+  color: var(--primary-color);
+}
+.down-angle {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.up-angle {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes arrow-anime{
+  0%{ opacity: 0.2;}
+  50%{text-shadow: 0 15px 30px var(--primary-color); opacity: 1;}
+  50%{ opacity: 0.7;}
+  100%{text-shadow: 0 3px 10px var(--primary-color); opacity: 0.2;}
+}
+.scroll-angle:hover {
+  font-size: 7rem;
+  opacity: 1;
+  animation: none;
+  text-shadow: 0 10px 20px var(--primary-color);
+}
+/* end first page  */
+
+.about-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+h1 { /*test */
+  color: var(--primary-color);
 }
