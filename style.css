@@ -27,7 +27,6 @@ body {
 :root {
   --primary-color: red;
   --black-color: #0a0a0a;
-  --red-collor: red;
   --white-collor: white;
 }
 /* * global styles end * */
@@ -200,20 +199,21 @@ body {
 
 .about-section {
   width: 100%;
-  height: 100vh;
-  position: relative;
+  min-height: 100vh;
   border-bottom: .5rem solid var(--white-collor);
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 .about-wrapper {
-  width: 65%;
+  width: 85%;
 }
 .about-para {
-  font-size: 8rem;
+  font-size: calc(1vw + 6rem);
   color: var(--white-collor);
   text-align: justify;
 }
 .about-para span {
-  color: var(--red-collor);
+  color: var(--primary-color);
 }
 .about-para:hover .contact-link{
   color: blue;
@@ -227,35 +227,35 @@ body {
 /*  * start tours section * */
 .tours-section {
   perspective: 1000px;
-  padding: 3rem;
+  padding: .5rem;
   min-height: 100vh;
-  border-bottom: .5rem solid var(--red-collor);
+  border-bottom: .5rem solid var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .tours-head {
   display: none;
 }
-.tours-head-card {
-  width: 500px;
-  height: 250px;
-  border-radius: .5rem;
-  background-color: transparent;
-  text-shadow: 0px 1px 10px red;
+.tours-head-wrapper {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   animation: spin ease 5s;
   animation-iteration-count: forward;
 }
 .tours-heading {
-  font-size: 8rem;
+  font-size: calc(1vw + 6rem);
   color: red;
 }
 .tours-heading-txt {
-  font-size: 2rem;
-  color: white;
+  font-size: calc(1vw + 2rem);
+  color: var(--white-collor);
+  animation: appear 6s ease-in-out;
 }
-/* heading card rotate animation */
+@keyframes appear{
+  0% { opacity: 0;}
+  90% { opacity: 0;}
+  100% {opacity: 1;}
+}
 @keyframes spin {
   from {
     transform: rotateY(0);
@@ -263,12 +263,105 @@ body {
   to {
     transform: rotateY(1turn);
   }
+} /* tours heading rotate animations */
+
+.tours-card-wrapper {
+  flex-wrap: wrap;
 }
-/* * end tours section * */
+.tours-card{
+  width:500px;
+  height:350px;
+  position:relative;
+  overflow:hidden;
+  background: url('./imgs/card-img1.jpg') ;
+  border-radius: .4rem;
+  margin: 2rem;
+}
+.tours-card-1 .img-bar{
+  background-image:url("./imgs/card-img1.jpg");
+}
+.tours-card-2 .img-bar{
+  background-image:url("./imgs/card-img2.jpg");
+}
+.tours-card-3 .img-bar{
+  background-image:url("./imgs/card-img3.jpg");
+}
+.tours-card-4 .img-bar{
+  background-image:url("./imgs/card-img4.jpg");
+}
+.tours-card .img-bar{
+  height:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  position:absolute;
+  transition:all 1s;
+  border-radius:5px;
+}
+
+.tours-card .img-bar:nth-child(1){
+  width:25%;
+  z-index:6;
+  transition-delay:0s;
+}
+.tours-card .img-bar:nth-child(2){
+  width:50%;
+  z-index:5;
+  transition-delay:0.2s;
+}
+.tours-card .img-bar:nth-child(3){
+  width:75%;
+  z-index:4;
+  transition-delay:0.4s;
+}
+.tours-card .img-bar:nth-child(4){
+  width:100%;
+  z-index:3;
+  transition-delay:0.6s;
+}
+.tours-card:hover .img-bar{
+  transform:translateY(-100%);
+}
+
+.card-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  height:100%;
+  padding:0 30px;
+  text-transform:capitalize;
+  font-family: Arial;
+  text-align:center;
+  transform:translateY(100%);
+  transition:all 1.5s;
+  transition-delay:0.3s;
+  color: rgb(48, 47, 47);
+}
+.card-content h2 {
+  font-size: 3rem;
+}
+.card-content p{
+  margin: 2rem 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.tours-card:hover .card-content{
+  transform:translateY(0);
+}
+
+.all-tours-link {
+  text-align: center;
+  color: red;
+  font-size: 2rem;
+}
+.all-tours-link:hover {
+  text-decoration: underline;
+}
+/* *  ** end tours section ** * */
 
 .contact-section {
   height: 100vh;
   width: 100%;
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: var(--white-collor);
 }
