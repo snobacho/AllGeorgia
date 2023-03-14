@@ -8,3 +8,15 @@ window.addEventListener('scroll', function() {
     }
 });   // * card header appears when the card section is visible and an animation is starting
   
+
+const menu = document.querySelector('.menu');
+const spans = menu.children;
+menu.addEventListener('click', function() {
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    spans[1].style.backgroundColor = 'white';
+  } else {
+    menu.classList.add('open');
+    spans[1].style.backgroundColor = 'black';
+  }
+}); // * burger menu
