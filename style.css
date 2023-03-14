@@ -4,7 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
-  list-style: none;
+  list-style: none; 
 }
 html {
   font-size: 60%; 
@@ -90,40 +90,69 @@ body {
 
 .firs-page {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
+.menu-content {
+  width: 100%;
+  height: 100vh;
+  place-content: center;
+  position: fixed;
+  flex-direction: column; 
+  z-index: 8;
+  background-color: var(--black-color);
+  transition: transform 1s;
+}
+.menu-content {
+  transform: translateX(-100%);
+}
+.menu-content.open-menu {
+  transform: translateX(0);
+}
+.menu-content li a {
+  font-size: 4rem;
+  color: white;
+  line-height: 6rem;
+  font-weight: 600;
+  transition: .4s;
+}
+.menu-content li a:hover {
+  text-decoration: underline;
+}
 .menu {
-  display: grid;
-  justify-content: right;
+  position: fixed;
+  top: 0;
+  right: 0;
   margin: 5rem;
-  gap: .2rem;
   cursor: pointer;
+  z-index: 9;
 }
 .menu span {
   display: block;
   width: 50px;
   height: 10px;
   background-color: rgb(255, 255, 255);
-  margin-bottom: 4px;
-  transition:  0.5s ease-in-out ;
+  transition:  0.5s ease-in-out;
+  margin: .7rem;
 }
-
 .menu span:first-child {
   transform-origin: 0% 0%;
 }
-
 .menu span:last-child {
   transform-origin: 0% 100%;
 }
-
 .menu.open span:first-child {
   transform: rotate(45deg);
 }
-
 .menu.open span:last-child {
   transform: rotate(-45deg);
 }
+/* @media (min-width: 768px) {
+  .menu,.menu-content {
+    display: none;
+  }
+} */
+
 /* Allgeorgia text - animation */
 .logo {
   position: absolute;
@@ -134,7 +163,6 @@ body {
   animation: logo-border 5s ease forwards;
   padding: 0 0 0.2rem 0;
 }
-
 .logo path:nth-child(2){  /* first child is rect */
   stroke-dashoffset: 362.75px;
   stroke-dasharray: 362.75px;
@@ -303,9 +331,10 @@ body {
   height:350px;
   position:relative;
   overflow:hidden;
-  background: url('./imgs/card-img1.jpg') ;
+  background: black;
   border-radius: .4rem;
   margin: 2rem;
+  transition: border 3s;
 }
 .tours-card-1 .img-bar{
   background-image:url("./imgs/card-img1.jpg");
@@ -370,15 +399,21 @@ body {
   font-weight: 700;
 }
 .card-content h2 {
+  color: white;
   font-size: 3rem;
 }
 .card-content p{
+  color: white;
+  text-decoration: underline;
   margin: 2rem 0;
   font-size: 2rem;
   line-height: 4rem;
 }
 .tours-card:hover .card-content{
   transform:translateY(0);
+}
+.tours-card:hover {
+  border: .1rem solid red;
 }
 
 .all-tours-link {

@@ -22,17 +22,25 @@
           <span>.</span>
     </div>
     <section class="firs-page" id="first-section">
-        <div class="menu">
+        <div class="menu" onclick="toggleNav()">
             <span></span>
             <span></span>
             <span></span>
-          </div>
-        <div class="dropdown">
-            <h2>Home</h2>
-            <h2>About</h2>
-            <h2>Tours</h2>
-            <h2>Contact</h2>
         </div>
+        <nav class="menu-content center">
+            <li >
+                <a href="#first-section" onclick="closeNav()">Home</a>
+            </li>
+            <li>
+                <a href="#about-section" onclick="closeNav()">About</a>
+            </li>
+            <li>
+                <a href="#tours-section" onclick="closeNav()">Tours</a>
+            </li>
+            <li>
+                <a href="#contact-section" onclick="closeNav()">Contact</a>
+            </li>
+        </nav>
     <!-- text animation -->
         <svg class="logo"  width="486" height="90" viewBox="0 0 486 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-outside-1_1_5" maskUnits="userSpaceOnUse" x="0.301132" y="0.5" width="486" height="89" fill="black">
@@ -84,7 +92,7 @@
         </div>
     </section> 
     <!-- * end about section * -->
-    <section class="tours-section">
+    <section class="tours-section" id="tours-section">
         <div class="tours-head">
             <div class="tours-head-wrapper">
                 <h2 class="tours-heading">We offer tours throughout Georgia</h2>
@@ -151,7 +159,7 @@
                       repellat error reiciendis beatae totam.
                   </p>
                 </div>
-              </div>
+              </div> 
         </div>
         <a href="#" class="all-tours-link">SEE ALL TOURS <i class="fa-sharp fa-solid fa-angles-right right-dir-icon"></i></a>
     </section>

@@ -7,8 +7,7 @@ window.addEventListener('scroll', function() {
         cardHeadPara.style.animationPlayState = "running";  
     }
 });   // * card header appears when the card section is visible and an animation is starting
-  
-
+   
 const menu = document.querySelector('.menu');
 const spans = menu.children;
 menu.addEventListener('click', function() {
@@ -20,3 +19,14 @@ menu.addEventListener('click', function() {
     spans[1].style.backgroundColor = 'black';
   }
 }); // * burger menu
+
+function toggleNav() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open-menu');
+}
+
+// ! BUG  dont closing
+function closeNav() { 
+  const nav = document.querySelector('.menu-content');
+  nav.classList.remove('open-menu');
+}
