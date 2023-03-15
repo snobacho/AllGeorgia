@@ -8,9 +8,12 @@ window.addEventListener('scroll', function() {
     }
 });   // * card header appears when the card section is visible and an animation is starting
    
+
 const menu = document.querySelector('.menu');
 const spans = menu.children;
-menu.addEventListener('click', function() {
+const nav = document.querySelector('nav');
+
+function burgerMenu() {
   if (menu.classList.contains('open')) {
     menu.classList.remove('open');
     spans[1].style.backgroundColor = 'white';
@@ -18,15 +21,16 @@ menu.addEventListener('click', function() {
     menu.classList.add('open');
     spans[1].style.backgroundColor = 'black';
   }
-}); // * burger menu
+}
+menu.addEventListener('click', function() {
+  burgerMenu()
+}); 
 
 function toggleNav() {
-  const nav = document.querySelector('nav');
   nav.classList.toggle('open-menu');
 }
-
-// ! BUG  dont closing
 function closeNav() { 
-  const nav = document.querySelector('.menu-content');
   nav.classList.remove('open-menu');
+  burgerMenu()
 }
+// *  menu  end
