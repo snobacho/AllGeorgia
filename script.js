@@ -16,7 +16,7 @@ const nav = document.querySelector('nav');
 function burgerMenu() {
   if (menu.classList.contains('open')) {
     menu.classList.remove('open');
-    spans[1].style.backgroundColor = 'white';
+    spans[1].style.backgroundColor = '#CAD1CA';
   } else {
     menu.classList.add('open');
     spans[1].style.backgroundColor = 'black';
