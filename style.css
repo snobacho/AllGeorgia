@@ -30,12 +30,12 @@ body {
   display: none;
 }
 :root {
-  --red-color: rgb(223, 23, 23);
+  --primary-collor: rgb(54, 170, 9);
   --black-color: #0a0a0a;
-  --primary-color: rgb(202, 209, 202);
+  --white-collor: rgb(158, 163, 158);
 }
 ::selection {
-  background-color: gray;
+  background-color: rgb(36, 34, 34);
 }
 /* * global styles end * */
 
@@ -56,11 +56,11 @@ body {
 
 @keyframes loading {
   0% {
-    text-shadow: 10px 0 70px var(--red-color);
-    color: var(--primary-color);
+    text-shadow: 10px 0 70px var(--primary-collor);
+    color: var(--white-collor);
   }
   100% {
-    color: var(--red-color);
+    color: var(--primary-collor);
       font-size: 4rem;
     }
   }
@@ -115,7 +115,7 @@ body {
 }
 .menu-content li a {
   font-size: 4rem;
-  color: var(--primary-color);
+  color: var(--white-collor);
   line-height: 6rem;
   font-weight: 600;
   transition: .4s;
@@ -135,7 +135,7 @@ body {
   display: block;
   width:  50px;
   height:  10px;
-  background-color: var(--primary-color);
+  background-color: var(--white-collor);
   transition:  0.5s ease-in-out;
   margin: .7rem;
 }
@@ -231,7 +231,7 @@ body {
   transition: font-size .5s;
 }
 .scroll-angle a {
-  color: var(--red-color);
+  color: var(--primary-collor);
 }
 .down-angle {
   position: absolute;
@@ -248,9 +248,9 @@ body {
 
 @keyframes arrow-anime {
   0%{ opacity: 0.2;}
-  50%{text-shadow: 0 15px 30px var(--red-color); opacity: 1;}
+  50%{text-shadow: 0 15px 30px var(--primary-collor); opacity: 1;}
   50%{ opacity: 0.7;}
-  100%{text-shadow: 0 3px 10px var(--red-color); opacity: 0.2;}
+  100%{text-shadow: 0 3px 10px var(--primary-collor); opacity: 0.2;}
 }
 .scroll-angle:hover {
   font-size: 9rem;
@@ -262,7 +262,7 @@ body {
 .about-section {
   width: 100%;
   min-height: 100vh;
-  border-bottom: .5rem solid var(--primary-color);
+  border-bottom: .5rem solid var(--white-collor);
   margin-bottom: 4rem;
   padding-bottom: 2rem;
 }
@@ -271,16 +271,16 @@ body {
 }
 .about-para {
   font-size: calc(1vw + 5rem);
-  color: var(--primary-color);
+  color: var(--white-collor);
   text-align: justify;
   text-indent: 4rem;
 }
 .about-para span {
-  color: var(--red-color);
+  color: var(--primary-collor);
 }
 
 .contact-link {
-  color: var(--primary-color);
+  color: var(--white-collor);
   text-decoration: underline;
 }
 .contact-link:hover {
@@ -294,7 +294,7 @@ body {
   perspective: 1200px;
   padding: .3rem;
   min-height: 100vh;
-  border-bottom: .5rem solid var(--red-color);
+  border-bottom: .5rem solid var(--primary-collor);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -309,11 +309,11 @@ body {
 }
 .tours-heading {
   font-size: calc(1vw + 6rem);
-  color: var(--red-color);
+  color: var(--primary-collor);
 }
 .tours-heading-txt {
   font-size: calc(1vw + 2rem);
-  color: var(--primary-color);
+  color: var(--white-collor);
   animation: appear 6s ease-in-out;
 }
 @keyframes appear {
@@ -384,11 +384,11 @@ body {
   font-weight: 700;
 }
 .card-content h2 {
-  color: var(--red-color);
+  color: var(--primary-collor);
   font-size: 3rem;
 }
 .card-content p {
-  color: var(--primary-color);
+  color: var(--white-collor);
   text-indent: 2rem;
   font-size: 2rem;
   line-height: 3.5rem;
@@ -422,7 +422,7 @@ body {
 .contact-heading {
   font-size: calc(1vw + 6rem);
   text-align: center;
-  color: var(--red-color);
+  color: var(--primary-collor);
   margin: 8rem 0;
 }
 .contact-wrapper {
@@ -447,13 +447,13 @@ body {
   border-radius: .2rem;
   color: white;
   background-color: black;
-  border: .1rem solid red;
+  border: .1rem solid var(--primary-collor);
   transition: background-color .5s;
 }
 .form-input:focus, .textarea:focus {
-  background-color: gray;
+  border: .1rem solid var(--primary-collor);
   color: white;
-  border: none;
+  
 }
 .form-input:focus::placeholder, .textarea:focus::placeholder {
   color: rgb(0, 0, 0);
@@ -470,7 +470,7 @@ body {
   height: 80px;
   color: gray;
   background-color: black;
-  border: .1rem solid var(--red-color);
+  border: .1rem solid var(--primary-collor);
   cursor: pointer;
   transition: color .3s;
   font-weight: 600;
@@ -495,10 +495,10 @@ body {
   height: 6rem;
 }
 hr {
-  border: 1px solid var(--red-color);
+  border: 1px solid var(--primary-collor);
 }
 .contact-devices div a {
-  color: var(--primary-color);
+  color: var(--white-collor);
   letter-spacing: .16rem;
 }
 .contact-devices div a::selection {
@@ -522,14 +522,13 @@ hr {
   font-size: 4rem;
   margin: 0 1rem 1rem 0;
   cursor: pointer;
-  color: var(--primary-color);
+  color: var(--white-collor);
   transition: .3s;
 }
 .social-icons-wrapper ul a i:hover {
   color: rgb(255, 255, 255);
 }
 /* end contact section  */
-
 
 @media (max-width: 1120px) {
   html {

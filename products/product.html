@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./product.css">
+    <title>products</title>
+</head>
+<body>  
+        <div class="cards-container">
+            <div class="card" data-card-id="1">
+                <h3>Card 1</h3>
+                <p>card 1 descr</p>
+                <button class="btn open-modal">Open Modal</button>
+            </div>
+            <div class="card" data-card-id="2">
+                <h3>Card 2</h3>
+                <p>card 2 descr</p>
+                <button class="btn open-modal">Open Modal</button>
+            </div>
+        </div>        <!-- ****  cards  ****  -->
+     
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h3 id="modal-title"></h3>
+                <p id="modal-content"></p>
+                <button class="btn close-modal">Close</button>
+            </div>
+        </div>
+    <script src="./products.js"></script>
+</body>
+</html>
