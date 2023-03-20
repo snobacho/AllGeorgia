@@ -1,41 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100%;
+  width: 100%;
+  background: url("../imgs/productsBG.jpg") center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 1rem;
+}
+::selection {
+  background-color: rgb(36, 34, 34);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --primary-collor: rgb(61, 194, 4);
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cards-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-  
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 30%;
-    text-align: center;
-  }
-  
-  .btn {
-    margin-top: 10px;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.card {
+  width: 400px;
+  height: 420px;
+  flex-direction: column;
+  border: 1px solid gray;
+  gap: .7rem;
+}
+
+.card-bg img {
+  width: 300px;
+  height: 300px;
+}
+.card-title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--primary-collor);
+  margin: 0;
+}
+
+.card-descr {
+  display: none;
+}
+.btn {
+  margin: 0;
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  background: black;
+  border: 1px solid white;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  color: rgb(235, 226, 226);
+  cursor: pointer;
+}
+.btn:hover {
+  background:transparent;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  color: var(--primary-collor);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  width: 50%;
+  height: 90%;
+  text-align: center;
+  border: 1px solid white;
+  flex-direction: column;
+}
+.modal-content div {
+  max-width:  300px;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  color: white;
+  text-shadow: 0 15px 30px rgb(0, 0, 0);
+}
+#modal-title {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
   .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 80%;
-    text-align: center;
+    width: 90%;
   }
-  
-  #modal-title {
-    margin-top: 0;
+}
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    height: 50%;
+
   }
+  .card-bg img {
+    width: 250px;
+    height: 250px;
+  }
+  .modal-content div {
+    width: 90%;
+    font-size: 1.4rem;
+  }
+}
