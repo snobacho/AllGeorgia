@@ -16,7 +16,13 @@ cards.forEach(card => {
   });
 });
 
-// close modal button
+//close modal
 document.querySelector('.close-modal').addEventListener('click', () => {
   modal.style.display = 'none';
+});
+
+document.addEventListener('click', event => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
 });
