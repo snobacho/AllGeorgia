@@ -1,3 +1,12 @@
+const upScrollAngle = document.querySelector(".up-angle");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > document.querySelector('.about-section').offsetTop - 20) {
+    upScrollAngle.style.position = "fixed";
+  } else {
+    upScrollAngle.style.position = "static";
+  }
+}); // * up scroll angle 
+
 const cardHeadPara = document.querySelector('.tours-heading-txt')
 window.addEventListener('scroll', function() {
     let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
