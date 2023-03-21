@@ -1,9 +1,39 @@
+const logo = document.querySelector('.logo');
+const scrollDownAngle = document.querySelector('.down-angle');
+const startOpacity = 1;
+const endOpacity = 0.1;
+const factor = 0.1; 
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const viewportHeight = window.innerHeight;
+  const maxScroll = document.body.scrollHeight - viewportHeight;
+  const scrollPercent = scrollTop / maxScroll;
+
+  let opacity;
+  if (scrollTop > (viewportHeight * 0.5)) {
+    scrollDownAngle.style.animation = 'none'; 
+    opacity = endOpacity;
+  } else {
+    opacity = startOpacity - ((scrollPercent ** factor) * (startOpacity - endOpacity));
+    if (scrollTop === 0) {
+      scrollDownAngle.style.animation = 'arrow-anime 4s linear infinite'; // start the animation
+    }
+  }
+  logo.style.opacity = opacity;
+  scrollDownAngle.style.opacity = opacity;
+});  
+// * As you scroll opacity decreases and increases on the home page
+
+
 const upScrollAngle = document.querySelector(".up-angle");
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > document.querySelector('.about-section').offsetTop - 20) {
-    upScrollAngle.style.position = "fixed";
+      upScrollAngle.style.display = 'block'
+      upScrollAngle.style.position = "fixed";
   } else {
-    upScrollAngle.style.position = "static";
+      upScrollAngle.style.position = "static";
   }
 }); // * up scroll angle 
 
