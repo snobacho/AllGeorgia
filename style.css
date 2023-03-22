@@ -88,7 +88,6 @@ section {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  /* position: fixed; */
 }
 .menu-content {
   width: 100%;
@@ -129,7 +128,6 @@ section {
   height:  10px;
   background-color: var(--white-collor);
   transition:  0.5s ease-in-out;
-  margin: .9rem;
 }
 .menu span:first-child {
   transform-origin: 0% 0%;
@@ -299,10 +297,6 @@ animation: none;
 
 .tours-head-wrapper {
   text-align: center;
-  animation: spin ease 5s;
-  animation-iteration-count: forward;
-  border-bottom: .5rem solid var(--white-collor);
-
 }
 .tours-heading {
   font-size: calc(1vw + 6rem);
@@ -311,6 +305,7 @@ animation: none;
 .tours-heading-txt {
   font-size: calc(1vw + 2rem);
   color: var(--white-collor);
+  margin: 1rem 0;
 }
  /* tours heading rotate animations */
 
@@ -344,7 +339,7 @@ animation: none;
   background-size:cover;
   background-repeat:no-repeat;
   position:absolute;
-  transition:all 1s;
+  transition:all 1.4s;
   border-radius:5px;
 }
 .tours-card .img-bar {
@@ -353,7 +348,7 @@ animation: none;
   transition-delay: 0.1s;
 }
 .tours-card:hover .img-bar {
-  transform:translateY(-100%);
+  transform: scale(0) translateY(-100%);
 }
 
 .card-content {
@@ -473,27 +468,24 @@ animation: none;
   gap: 1rem 0;
   width: auto;
 }
-.contact-devices div{
+.phone{
+  text-align: center;
   display: flex;
+  justify-content: center;
   font-size: calc(1vw + .7rem);
   gap: 1rem;
   height: 4rem;
+  color: rgb(238, 42, 42);
+}
+.phone a {
+  color: dodgerblue;
+  font-size: calc(1vw + .7rem);
 }
 hr {
   border: .3rem solid var(--primary-collor);
 }
-.contact-devices div a {
-  color: var(--white-collor);
-  letter-spacing: .05rem;
-  font-size: calc(1vw + .7rem);
-  display: block;
-  display: flex;
-  justify-content: center;
-}
-.contact-devices div a::selection {
-  color: dodgerblue;
-}
-.contact-devices div a:hover {
+
+.phone a:hover {
   text-decoration: underline;
 }
 .contact-devices div:nth-child(1) {
@@ -523,7 +515,7 @@ hr {
 .contact-descr-para {
   color: var(--white-collor);
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 4rem;
   margin: 3rem 0;
   text-decoration: underline;
   text-align: center;
@@ -559,6 +551,9 @@ hr {
   }
   .contact-form {
     width: 100%;
+  }
+  .phone a {
+    font-size: .7rem;
   }
 }
 @media (max-width: 400px) {
