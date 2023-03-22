@@ -499,9 +499,9 @@ animation: none;
 }
 .contact-devices div{
   display: flex;
-  font-size: 3rem;
+  font-size: calc(1vw + .7rem);
   gap: 1rem;
-  height: 6rem;
+  height: 4rem;
 }
 hr {
   border: .3rem solid var(--primary-collor);
@@ -509,10 +509,13 @@ hr {
 .contact-devices div a {
   color: var(--white-collor);
   letter-spacing: .05rem;
-  font-size: 3rem;
+  font-size: calc(1vw + .7rem);
+  display: block;
+  display: flex;
+  justify-content: center;
 }
 .contact-devices div a::selection {
-  color: white;
+  color: dodgerblue;
 }
 .contact-devices div a:hover {
   text-decoration: underline;
@@ -526,67 +529,30 @@ hr {
 
 .social-icons-wrapper ul {
   display: flex;
-  margin: 1.2rem 0;
+  justify-content: center;
 }
 .social-icons-wrapper ul a i {
-  font-size: 3rem;
+  font-size: 3.4rem;
   margin: 0 2rem 1rem 0;
   cursor: pointer;
+  transition: .2s;
   color: var(--white-collor);
-  transition: .3s;
 }
 .social-icons-wrapper ul a i:hover {
   color: rgb(255, 255, 255);
 }
-
+.contact-desc-wrap {
+  max-width: 385px;
+}
 .contact-descr-para {
-  color: rgb(41, 155, 140);
-  max-width: 340px;
+  color: var(--white-collor);
   font-size: 1.5rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
   margin: 3rem 0;
   text-decoration: underline;
-  text-align: justify;
+  text-align: center;
 }
 /* end contact section  */
-
-@media (max-width: 1120px) {
-  html {
-    font-size: 45%;
-  }
-  .contact-wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .social-contacts {
-    margin-top: 10rem;
-  }
-  .contact-devices div {
-    font-size: 2rem;
-    height: 4rem;
-  }
-  .contact-devices {
-    margin-top: 5rem;
-  }
-  .contact-devices div a {
-    font-size: 2.8rem;
-  }
-}
-@media (max-width: 700px) {
-  .contact-form, .social-contacts {
-    width: 100%;
-  }
-  .menu span {
-    margin: .9rem ;
-  }
-}
-@media (max-width: 400px) {
-  html {
-    font-size: 40%;
-  }
-}
-
 .copy {
   text-align: right;
   font-size: 15px;
@@ -595,4 +561,29 @@ hr {
 }
 .copy a {
   color: white;
+}
+
+@media (max-width: 1120px) {
+  html {
+    font-size: 45%;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  .menu span {
+    width: 40px;
+    height: 8px;
+    margin: .7rem;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 40%;
+  }
 }
