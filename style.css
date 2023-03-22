@@ -33,9 +33,9 @@ body {
   display: none;
 }
 :root {
-  --primary-collor: rgb(65, 184, 17);
+  --primary-collor: rgb(75, 143, 36);
   --black-color: #0a0a0a;
-  --white-collor: rgb(194, 202, 194);
+  --white-collor: rgb(168, 173, 168);
 }
 ::selection {
   background-color: rgb(36, 34, 34);
@@ -127,6 +127,7 @@ section {
   width:  50px;
   height:  10px;
   background-color: var(--white-collor);
+  margin: .9rem;
   transition:  0.5s ease-in-out;
 }
 .menu span:first-child {
@@ -335,12 +336,12 @@ animation: none;
   background-image:url("./imgs/card-img4.jpg");
 }
 .tours-card .img-bar {
-  height:100%;
-  background-size:cover;
-  background-repeat:no-repeat;
-  position:absolute;
-  transition:all 1.4s;
-  border-radius:5px;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: all 1.4s;
+  border-radius: 5px;
 }
 .tours-card .img-bar {
   width: 100%;
@@ -354,7 +355,7 @@ animation: none;
 .card-content {
   flex-direction:column;
   height:100%;
-  padding:0 30px;
+  padding:0 2rem;
   transform:translateY(100%);
   transition:all 1.5s;
   transition-delay:0.3s;
@@ -369,7 +370,7 @@ animation: none;
 .card-content p {
   color: var(--white-collor);
   text-indent: 2rem;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   line-height: 3.5rem;
   font-family: 'Josefin', sans;
   letter-spacing: .2rem;
@@ -472,27 +473,21 @@ animation: none;
   text-align: center;
   display: flex;
   justify-content: center;
-  font-size: calc(1vw + .7rem);
+  font-size: 2rem;
   gap: 1rem;
+  margin-right: 2rem;
   height: 4rem;
-  color: rgb(238, 42, 42);
+  color: var(--primary-collor);
 }
 .phone a {
-  color: dodgerblue;
-  font-size: calc(1vw + .7rem);
+  color: rgb(174, 187, 199);
+  font-size: 2rem;
 }
-hr {
-  border: .3rem solid var(--primary-collor);
-}
-
 .phone a:hover {
   text-decoration: underline;
 }
-.contact-devices div:nth-child(1) {
-  color: green;
-}
-.contact-devices div:nth-child(2) {
-  color: orange;
+hr {
+  border: .3rem solid var(--primary-collor);
 }
 
 .social-icons-wrapper ul {
@@ -510,15 +505,28 @@ hr {
   color: rgb(255, 255, 255);
 }
 .contact-desc-wrap {
-  max-width: 385px;
+  max-width: 600px;
 }
 .contact-descr-para {
   color: var(--white-collor);
   font-size: 1.5rem;
-  line-height: 4rem;
+  line-height: 3rem;
+  letter-spacing: .1rem;
   margin: 3rem 0;
-  text-decoration: underline;
   text-align: center;
+}
+.google-map {
+  max-width: 600px;
+  height: 310px;
+  filter: grayscale(95%);
+  transition: .3s;
+}
+.google-map:hover {
+  filter: grayscale(0%);
+}
+.google-map iframe{
+  width: 100%;
+  height: 100%;
 }
 /* end contact section  */
 .copy {
@@ -528,7 +536,7 @@ hr {
   background-color: var(--black-color);
 }
 .copy a {
-  color: white;
+  color: rgb(173, 162, 162);
 }
 
 @media (max-width: 1120px) {
@@ -551,9 +559,6 @@ hr {
   }
   .contact-form {
     width: 100%;
-  }
-  .phone a {
-    font-size: .7rem;
   }
 }
 @media (max-width: 400px) {
