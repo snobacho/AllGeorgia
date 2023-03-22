@@ -9,18 +9,12 @@
     <title>AllGeorgia</title>
 </head>
 <body>
-    <div class="loader center">
-          <span>L</span>
-          <span>o</span>
-          <span>a</span>
-          <span>d</span>
-          <span>i</span>
-          <span>n</span>
-          <span>g</span>
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
-    </div>
+    <div class="loader-div">
+        <h2 class="loader-txt" data-text="LOADING...">
+            LOADING...
+        </h2>
+      </div> 
+    <div class="body-wrapper">
     <section class="firs-page" id="first-section">
         <div class="menu" onclick="toggleNav()">
             <span></span>
@@ -97,12 +91,10 @@
     </section> 
     <!-- * end about section * -->
     <section class="tours-section" id="tours-section">
-        <div class="tours-head">
             <div class="tours-head-wrapper">
                 <h2 class="tours-heading">We offer tours throughout Georgia</h2>
                 <p class="tours-heading-txt">Take a look at some of them</p>
             </div>
-        </div>
         <div class="tours-card-wrapper center">
             <div class="tours-card tours-card-1">
                 <span class="img-bar"></span>
@@ -176,6 +168,7 @@
                 <textarea class="textarea"  placeholder="Message" ></textarea>
                 <button class="submit-btn" type="submit" value="SEND">Send Message</button>
             </form>
+            <hr class="hr">
             <div class="social-contacts">
                 <div class="contact-devices">
                     <div class="phone">
@@ -186,8 +179,8 @@
                         <i class="fa-solid fa-envelope"></i>
                         <a href="mailto:bla@gmail.com">Giorgicheli@gmail.com</a>
                     </div>
-                    <hr>
                 </div>
+                <hr>
                 <div class="social-icons-wrapper">
                     <ul>
                         <a class="social-icon"><i class="fa-brands fa-facebook"></i></a>
@@ -204,9 +197,9 @@
                     </div>
                 </div>
             </div>
-      </section>
-    <p class="copy"><a href="https://www.mycompany.com/copyright">&copy; 2023 GIORGI CHELIDZE</a></p>
-
+        </section>
+        <p class="copy"><a href="https://www.mycompany.com/copyright">&copy; 2023 GIORGI CHELIDZE</a></p>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

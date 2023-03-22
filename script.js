@@ -1,3 +1,15 @@
+const bodyWrapper = document.querySelector('.body-wrapper')
+const loadered = document.querySelector('.loader-div')
+
+
+
+setTimeout(() => {
+  loadered.style.display = 'none';
+  bodyWrapper.style.display = 'block';
+}, 4000);
+
+
+
 const logo = document.querySelector('.logo');
 const scrollDownAngle = document.querySelector('.down-angle');
 const startOpacity = 1;
@@ -37,16 +49,6 @@ window.addEventListener("scroll", () => {
   }
 }); // * up scroll angle 
 
-const cardHeadPara = document.querySelector('.tours-heading-txt')
-window.addEventListener('scroll', function() {
-    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollPosition >= 1300) {
-        document.querySelector('.tours-head').style.display = 'block';
-        cardHeadPara.style.animationName = "appear";
-        cardHeadPara.style.animationPlayState = "running";  
-    }
-});   // * card header appears when the card section is visible and an animation is starting
-   
 
 const menu = document.querySelector('.menu');
 const spans = menu.children;
