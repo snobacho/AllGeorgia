@@ -552,6 +552,18 @@ hr {
   color: rgb(173, 162, 162);
 }
 
+/* back arrow for another page */
+.fa-arrow-left {
+  font-size: 4rem;
+  color: white;
+  margin: 2rem;
+  position: fixed;
+  transition: transform .5s ;
+}
+.fa-arrow-left:hover {
+  transform: scale(110%);
+}
+
 @media (max-width: 1120px) {
   html {
     font-size: 45%;
@@ -579,3 +591,5 @@ hr {
     font-size: 40%;
   }
 }
+
+
