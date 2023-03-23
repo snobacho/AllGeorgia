@@ -52,3 +52,18 @@ body {
 .gallery-content .img-box img:hover {
     transform: scale(120%);
 }
+
+@media only screen and (max-width: 700px){
+    .gallery-content{
+        grid-gap: .5rem;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .gallery-content .img-box:nth-child(7n + 1) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .gallery-heading {
+        font-size: 1.4rem;
+    }
+}
