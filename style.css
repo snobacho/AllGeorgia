@@ -33,7 +33,7 @@ body {
   display: none;
 }
 :root {
-  --primary-collor: rgb(75, 143, 36);
+  --primary-collor: green;
   --black-color: #0a0a0a;
   --white-collor: rgb(195, 201, 195);
 }
@@ -264,10 +264,10 @@ animation: none;
   padding-bottom: 2rem;
 }
 .about-wrapper {
-  width: 85%;
+  width: 90%;
 }
 .about-para {
-  font-size: calc(1vw + 5rem);
+  font-size: calc(1vw + 4rem);
   color: var(--white-collor);
   text-align: justify;
   text-indent: 4rem;
@@ -367,44 +367,42 @@ animation: none;
   font-size: 4rem;
 }
 .card-content p {
-  color: var(--white-collor);
+  color: white;
   text-indent: 2rem;
   font-size: 1.7rem;
   line-height: 3.5rem;
   font-family: 'Josefin', sans;
   letter-spacing: .2rem;
   text-align: justify;
-  font-weight: 800;
+  font-weight: 600;
 }
 .tours-card:hover .card-content {
   transform:translateY(0);
 }
 .btns-wrap {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: space-evenly;
-  margin: 2rem 0;
 }
 .link-btn {
-  width: 300px;
+  width: 25%;
+  min-width: 200px;
   height: 50px;
+  margin: 2rem 1rem 0 0;
   background-color: #0a0a0a;
   border-radius: 1rem;
-  cursor: pointer;
-  box-shadow:  1rem 1rem 4rem black;
+  box-shadow:  1rem 1rem 4rem rgb(46, 45, 45);
   transition: transform .5s;
+  cursor: pointer;
 }
 .link-btn:hover {
-  transform: scale(120%);
-  box-shadow: 1rem 1rem 4rem rgb(92, 90, 90);
+  transform: scale(110%);
 }
+
 .link-btn a {
-  color: white;
+  color: dodgerblue;
   font-size: 2.8rem;
   font-weight: 900;
-  text-decoration: underline;
 }
 /* *  ** end tours section ** * */
 
@@ -534,8 +532,9 @@ hr {
 }
 .google-map {
   max-width: 600px;
-  height: 280px;
+  height: 260px;
   transition: .3s;
+  margin: 1rem 0;
 }
 .google-map iframe{
   width: 100%;
