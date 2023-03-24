@@ -40,11 +40,9 @@ body {
 ::selection {
   background-color: rgb(41, 40, 40);
 }
-
 /* * global styles end * */
 
-.loader-div {
-  display: block;
+.loader-box {
   height: 100vh;
   width: 100%;
   background: url("./imgs/productsBG.jpg");
@@ -70,7 +68,7 @@ body {
   top: 0;
   left: 0;
   border-bottom: 5px solid rgb(194, 202, 194);
-  animation: load linear forwards;
+  animation: load 5s linear forwards;
   animation-duration: var(--animation-duration, 5s);
   overflow: hidden;
 }

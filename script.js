@@ -1,22 +1,22 @@
 const bodyWrapper = document.querySelector('.body-wrapper')
-const loaderBox = document.querySelector('.loader-div')
+const loaderBox = document.querySelector('.loader-box')
+
+var timeoutValue = 5400; 
+let animationDuration = '5s'; 
+if (localStorage.getItem('animationDuration')) {
+  animationDuration = '2s'; 
+  animationDuration = localStorage.getItem('animationDuration');
+  var timeoutValue = 2900; 
+}
 
 setTimeout(() => { 
   loaderBox.style.display = 'none';
   bodyWrapper.style.display = 'block';
-}, 5000);
+}, timeoutValue);
 
-let animationDuration = '5s';
-if (localStorage.getItem('animationDuration')) {
-  animationDuration = localStorage.getItem('animationDuration');
-}
 document.querySelector('.loader-txt').style.setProperty('--animation-duration', animationDuration);
-document.querySelectorAll('.link-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelector('.loader-txt').style.setProperty('--animation-duration', '2s');
-    localStorage.setItem('animationDuration', '2s');
-  });
-});
+
+localStorage.setItem('animationDuration', '2.5s');     // * set timeout when users have localStorage and or not
 
 
 
