@@ -35,10 +35,10 @@ body {
 :root {
   --primary-collor: rgb(75, 143, 36);
   --black-color: #0a0a0a;
-  --white-collor: rgb(168, 173, 168);
+  --white-collor: rgb(195, 201, 195);
 }
 ::selection {
-  background-color: rgb(36, 34, 34);
+  background-color: rgb(41, 40, 40);
 }
 
 /* * global styles end * */
