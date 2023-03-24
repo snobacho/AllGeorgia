@@ -70,7 +70,8 @@ body {
   top: 0;
   left: 0;
   border-bottom: 5px solid rgb(194, 202, 194);
-  animation: load 4s linear forwards;
+  animation: load linear forwards;
+  animation-duration: var(--animation-duration, 5s);
   overflow: hidden;
 }
 @keyframes load {

@@ -1,12 +1,22 @@
 const bodyWrapper = document.querySelector('.body-wrapper')
-const loadered = document.querySelector('.loader-div')
+const loaderBox = document.querySelector('.loader-div')
 
-
-
-setTimeout(() => {
-  loadered.style.display = 'none';
+setTimeout(() => { 
+  loaderBox.style.display = 'none';
   bodyWrapper.style.display = 'block';
-}, 4000);
+}, 5000);
+
+let animationDuration = '5s';
+if (localStorage.getItem('animationDuration')) {
+  animationDuration = localStorage.getItem('animationDuration');
+}
+document.querySelector('.loader-txt').style.setProperty('--animation-duration', animationDuration);
+document.querySelectorAll('.link-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.loader-txt').style.setProperty('--animation-duration', '2s');
+    localStorage.setItem('animationDuration', '2s');
+  });
+});
 
 
 
