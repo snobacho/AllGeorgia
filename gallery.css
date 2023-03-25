@@ -1,4 +1,9 @@
-
+body {
+    background-color:  aliceblue;
+    height: 100vh;
+    width: 100%;
+    z-index: 23333;
+}
 .gallery-heading {
     font-size: 2.7rem;
     font-family: 'Edu NSW ACT Foundation', cursive;
