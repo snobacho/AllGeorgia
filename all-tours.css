@@ -20,11 +20,11 @@
 .all-tours-title {
   text-align: center;
   color: whitesmoke;
-  font-size: 4rem;
-  margin: 1rem 0;
+  font-size: 2rem;
+  margin: 4rem;
 }
 .all-tours-card {
-  width: 48%;
+  max-width: 700px;
   border: 2rem solid var(--tours-sec-color);
   margin-top: 10rem;
   padding: 1rem;
@@ -32,23 +32,23 @@
 .tours-card-tittile {
   white-space: nowrap;
   color: dodgerblue;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   margin: 0;
 }
  .tours-img {
   float: left;
-  max-width: 350px;
+  width: 350px;
   height: 300px;
   border-radius: 1rem;
 }
 .img-left {
   float: right;
-  margin: 0.5rem;
+  margin: 0.1rem;
 }
 .img-right {
   float: left;
-  margin: 0.5rem;
+  margin: 0.1rem;
 }
 .card-text {
   text-align: center;
@@ -114,4 +114,13 @@
   font-size: 4rem;
   color: white;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .all-tours-card {
+    display: grid;
+  }
+  .tours-img {
+    width: 100%;
+  }
 }
