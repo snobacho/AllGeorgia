@@ -9,6 +9,7 @@
   font-family: consolas;
   border: none;
 }
+
 html {
   font-size: 60%; 
   scroll-behavior: smooth;
@@ -21,6 +22,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  transition: .3s;
+}
+body::-webkit-scrollbar {
+  width: 0 !important; /* hide scrollbar on Webkit browsers (Chrome, Safari, etc.) */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body.is-scrolling .content {
+  transform: translate3d(0, calc(-1 * var(--scroll-pos)), 0);
 }
 .center {
   display: flex;
@@ -30,9 +43,9 @@ body {
 .hide {
   display: none;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 :root {
   --primary-collor: green;
   --black-color: #0a0a0a;

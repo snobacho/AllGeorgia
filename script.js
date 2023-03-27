@@ -85,3 +85,13 @@ function closeNav() {
   burgerMenu()
 }
 // *  menu  end
+
+
+  const scrollbar = Scrollbar.init(document.querySelector('body'), {
+    damping: 0.03,
+    thumbMinSize: 100
+  });
+// * scroll 
+
+
+  
