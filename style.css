@@ -7,9 +7,8 @@
   outline: none;
   list-style: none;
   border: none;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: sans-serif;  
 }
-fa-arrow-left
 html {
   font-size: 60%; 
   scroll-behavior: smooth;
@@ -40,7 +39,7 @@ body.is-scrolling .content {
   display: none;
 }
 :root {
-  --primary-collor: rgb(20, 194, 20);
+  --primary-collor: rgb(25, 179, 33);
   --black-color: #0a0a0a;
   --white-collor: rgb(195, 201, 195);
 }
@@ -266,13 +265,9 @@ animation: none;
 
 .about-section {
   width: 100%;
-  min-height: 100vh;
   border-bottom: .5rem solid var(--white-collor);
   margin-bottom: 4rem;
-  padding-bottom: 2rem;
-}
-.about-wrapper {
-  width: 90%;
+  padding: 5rem;
 }
 .about-para {
   font-size: calc(1vw + 4rem);
@@ -381,7 +376,6 @@ animation: none;
   transition:all 1.5s;
   transition-delay:0.3s;
   color: rgb(31, 30, 30);
-  font-style: italic;
   font-weight: 700;
 }
 .card-content h2 {
@@ -397,6 +391,7 @@ animation: none;
   letter-spacing: .2rem;
   text-align: justify;
   font-weight: 600;
+  font-style: italic;
 }
 .main-tour-price {
   color: dodgerblue;
