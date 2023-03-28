@@ -85,18 +85,3 @@ function closeNav() {
   burgerMenu()
 }
 // *  menu  end
-
-
-
-const imgBars = document.querySelectorAll('.img-bar');
-const angleBtns = document.querySelectorAll('.card-down-angle');
-
-imgBars.forEach((imgBar, index) => {
-  const imgBarBtn = imgBar.querySelector('.img-bar-btn');
-  const angleBtn = angleBtns[index];
-
-  imgBarBtn.addEventListener('click', () => {
-    imgBar.classList.toggle('active');
-    angleBtn.classList.toggle('active');
-  });
-});
