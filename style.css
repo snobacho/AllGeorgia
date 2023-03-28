@@ -6,8 +6,8 @@
   text-decoration: none;
   outline: none;
   list-style: none;
-  font-family: consolas;
   border: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 html {
@@ -24,10 +24,6 @@ body {
   background-attachment: fixed;
   transition: .3s;
 }
-body::-webkit-scrollbar {
-  width: 0 !important; /* hide scrollbar on Webkit browsers (Chrome, Safari, etc.) */
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -43,11 +39,8 @@ body.is-scrolling .content {
 .hide {
   display: none;
 }
-/* ::-webkit-scrollbar {
-  display: none;
-} */
 :root {
-  --primary-collor: green;
+  --primary-collor: rgb(20, 194, 20);
   --black-color: #0a0a0a;
   --white-collor: rgb(195, 201, 195);
 }
@@ -130,14 +123,16 @@ body.is-scrolling .content {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 5rem;
+  margin: 4rem;
   cursor: pointer;
   z-index: 100;
+  background-color: rgb(0, 0, 0);
+  
 }
 .menu span {
   display: block;
-  width:  50px;
-  height:  10px;
+  width: 50px;
+  height: 10px;
   background-color: var(--white-collor);
   margin: .9rem;
   transition:  0.5s ease-in-out;
@@ -281,9 +276,10 @@ animation: none;
 }
 .about-para {
   font-size: calc(1vw + 4rem);
+  font-family: 'Edu NSW ACT Foundation', cursive;
   color: var(--white-collor);
   text-align: justify;
-  text-indent: 4rem;
+  text-indent: 10rem;
 }
 .about-para span {
   color: var(--primary-collor);
@@ -357,17 +353,30 @@ animation: none;
 }
 .tours-card .img-bar {
   width: 100%;
+  display: grid;
+  place-items: center;
   z-index: 4;
   transition-delay: 0.1s;
 }
 .tours-card:hover .img-bar {
   transform: scale(0) translateY(-100%);
 }
+.img-bar-btn {
+  display: none;
+  color: white;
+  border: .2rem solid white;
+  background: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  z-index: 4;
+}
 
 .card-content {
   flex-direction:column;
-  height:100%;
-  padding:0 2rem;
+  height: 100%;
+  padding: 1rem 2rem;
   transform:translateY(100%);
   transition:all 1.5s;
   transition-delay:0.3s;
@@ -377,22 +386,29 @@ animation: none;
 }
 .card-content h2 {
   color: var(--primary-collor);
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 .card-content p {
-  color: white;
-  text-indent: 2rem;
-  font-size: 1.7rem;
-  line-height: 3.5rem;
+  color: rgb(255, 255, 255);
+  text-indent: 5rem;
+  font-size: 2rem;
+  line-height: 3rem;
   font-family: 'Josefin', sans;
   letter-spacing: .2rem;
   text-align: justify;
   font-weight: 600;
 }
+.main-tour-price {
+  color: dodgerblue;
+  font-size: 3rem;
+  margin-top:  3rem;
+  text-decoration: underline;
+}
 .tours-card:hover .card-content {
   transform:translateY(0);
 }
-.btns-wrap {
+
+.btns-wrap {   /* another pages links */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -580,6 +596,9 @@ hr {
   html {
     font-size: 45%;
   }
+  .card-content p {
+    line-height: 5rem;
+  }
   .contact-wrapper {
     flex-direction: column;
     align-items: center;
@@ -588,11 +607,17 @@ hr {
     display: block;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .menu {
+    margin: 3rem;
+  }
   .menu span {
     width: 40px;
     height: 8px;
     margin: .7rem;
+  }
+  .img-bar-btn {
+    display: block;
   }
   .contact-form {
     width: 100%;

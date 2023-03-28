@@ -87,11 +87,16 @@ function closeNav() {
 // *  menu  end
 
 
-  const scrollbar = Scrollbar.init(document.querySelector('body'), {
-    damping: 0.03,
-    thumbMinSize: 100
+
+const imgBars = document.querySelectorAll('.img-bar');
+const angleBtns = document.querySelectorAll('.card-down-angle');
+
+imgBars.forEach((imgBar, index) => {
+  const imgBarBtn = imgBar.querySelector('.img-bar-btn');
+  const angleBtn = angleBtns[index];
+
+  imgBarBtn.addEventListener('click', () => {
+    imgBar.classList.toggle('active');
+    angleBtn.classList.toggle('active');
   });
-// * scroll 
-
-
-  
+});

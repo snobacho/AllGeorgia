@@ -6,10 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
 } 
- .tours-header {
-  position: fixed;
+.tours-header {
   width: 100%;
   color: var(--tours-prim-color);
   background-color: rgb(22, 21, 21);
@@ -19,20 +17,19 @@
 }
 .all-tours-title {
   text-align: center;
-  color: whitesmoke;
-  font-size: 2rem;
-  margin: 4rem;
+  color: white;
+  font-size: 3rem;
+  margin: 1rem 0
 }
 .all-tours-card {
   max-width: 700px;
   border: 2rem solid var(--tours-sec-color);
-  margin-top: 10rem;
+  margin: 2rem 0;
   padding: 1rem;
 }
 .tours-card-tittile {
-  white-space: nowrap;
   color: dodgerblue;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-align: center;
   margin: 0;
 }
@@ -52,6 +49,7 @@
 }
 .card-text {
   text-align: center;
+  color: white;
 }
 .all-tour-description {
   font-size: 2.3rem;
@@ -94,14 +92,12 @@
 }
 .modal-content {
   background-color: rgba(0, 0, 0, 0.8);
-  margin: 10% auto;
+  margin: 0 auto;
+  margin-top: 15rem;
   padding: 0.5rem;
   max-width: 700px;
   animation: modalopen 1s;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 @keyframes modalopen {
   from {opacity: 0;}
