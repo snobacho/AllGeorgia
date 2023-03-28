@@ -9,7 +9,7 @@
   border: none;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+fa-arrow-left
 html {
   font-size: 60%; 
   scroll-behavior: smooth;
@@ -582,11 +582,15 @@ hr {
 
 /* back arrow for another page */
 .fa-arrow-left {
-  font-size: 4rem;
+  font-size: 5rem;
+  padding: 2rem;
   color: white;
   margin: 2rem;
   position: fixed;
   transition: transform .5s ;
+  z-index: 5;
+  background-color: black;
+  border-radius: 50%;
 }
 .fa-arrow-left:hover {
   transform: scale(110%);
