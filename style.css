@@ -15,9 +15,7 @@ html {
   font-weight: 600;
 }
 body {
-  height: 100vh;
-  width: 100%;
-  background: url("./imgs/productsBG.jpg");
+  background: url("./imgs/BG.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -47,23 +45,23 @@ body.is-scrolling .content {
   background-color: rgb(41, 40, 40);
 }
 /* * global styles end * */
+.body-wrapper {
+  display: none;
+}
 
 .loader-box {
   height: 100vh;
-  width: 100%;
+  display: grid;
+  place-items: center;
   background: url("./imgs/productsBG.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .loader-txt {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(44, 42, 42);
   position: relative;
   border-bottom: 5px solid rgb(44, 42, 42);
+  color: rgb(44, 42, 42);
   width: 205px;
   letter-spacing: .2rem;
   font-size: 3.5rem;
@@ -84,15 +82,6 @@ body.is-scrolling .content {
   100% { width: 100%; color: rgb(194, 202, 194);}
 }  
 
-.body-wrapper {
-  display: none;
-}
-
-.firs-page {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-}
 .menu-content {
   width: 100%;
   height: 100vh;
@@ -153,14 +142,18 @@ body.is-scrolling .content {
     display: none;
   }
 }
-
 /* Allgeorgia text - animation */
+
+.firs-page {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
 .logo {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 90%;
-  transform: translate(-50%, -50%);
+  top: 35%;
+  width: 95%;
   animation: fill 0.5s ease forwards 3;
   padding: 0 0 0.2rem 0;
   position: fixed;
@@ -227,6 +220,7 @@ body.is-scrolling .content {
   transition: font-size .5s;
   transition: .5s;
   animation: arrow-anime 4s ease-in-out infinite;
+  transform: translate(-50%, -50%);
 }
 .scroll-angle a {
   color: var(--white-collor);
@@ -235,7 +229,6 @@ body.is-scrolling .content {
   color: var(--white-collor);
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
   position: fixed;
 }
 .down-angle:hover {
@@ -243,9 +236,8 @@ animation: none;
 }
 .up-angle {
   position: absolute;
-  top: 95%;
+  top: 96.5%;
   left: 50%;
-  transform: translate(-50%, -50%);
   display: none;
   z-index: 1;
 }
@@ -267,7 +259,7 @@ animation: none;
   width: 100%;
   border-bottom: .5rem solid var(--white-collor);
   margin-bottom: 4rem;
-  padding: 5rem;
+  padding: 4rem;
 }
 .about-para {
   font-size: calc(1vw + 4rem);
@@ -298,12 +290,11 @@ animation: none;
   justify-content: space-between;
   flex-direction: column;
 }
-
 .tours-head-wrapper {
   text-align: center;
 }
 .tours-heading {
-  font-size: calc(1vw + 6rem);
+  font-size: calc(1vw + 5rem);
   color: var(--primary-collor);
 }
 .tours-heading-txt {
@@ -317,9 +308,9 @@ animation: none;
   flex-wrap: wrap;
 }
 .tours-card {
-  width:500px;
-  height:350px;
-  position:relative;
+  width: 500px;
+  height: 350px;
+  position: relative;
   overflow:hidden;
   background: rgba(0, 0, 0, 0.4);
   border: .4rem solid var(--white-collor);
@@ -380,13 +371,14 @@ animation: none;
 }
 .card-content h2 {
   color: var(--primary-collor);
-  font-size: 4.5rem;
+  font-size: 4rem;
+  margin: 1rem 0;
 }
 .card-content p {
   color: rgb(255, 255, 255);
   text-indent: 5rem;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2rem;
   font-family: 'Josefin', sans;
   letter-spacing: .2rem;
   text-align: justify;
@@ -412,7 +404,7 @@ animation: none;
   width: 25%;
   min-width: 200px;
   height: 50px;
-  margin: 2rem 1rem 0 0;
+  margin: 2rem 1rem;
   background-color: #0a0a0a;
   border-radius: 1rem;
   box-shadow:  1rem 1rem 4rem rgb(46, 45, 45);
@@ -438,7 +430,7 @@ animation: none;
   background-color: var(--black-color);
 }
 .contact-heading {
-  font-size: calc(1vw + 6rem);
+  font-size: calc(1vw + 4rem);
   text-align: center;
   color: var(--primary-collor);
   margin: 8rem 0;
@@ -450,8 +442,7 @@ animation: none;
   justify-content: space-evenly;
 }
 .contact-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem 0;
   width: 600px;
 }
@@ -509,8 +500,6 @@ animation: none;
 }
 .phone{
   text-align: center;
-  display: flex;
-  justify-content: center;
   font-size: 2rem;
   gap: 1rem;
   margin-right: 2rem;
@@ -547,22 +536,28 @@ hr {
 }
 .contact-descr-para {
   color: dodgerblue;
+  text-align: center;
   text-decoration: underline;
   font-size: 1.5rem;
   line-height: 3rem;
   letter-spacing: .1rem;
-  margin: 3rem 0;
-  text-align: center;
+  margin: 2rem 0;
 }
 .google-map {
-  max-width: 600px;
-  height: 260px;
+  height: 330px;
   transition: .3s;
   margin: 1rem 0;
+  filter: grayscale(30%);
+}
+.google-map:hover {
+  filter: grayscale(0);
 }
 .google-map iframe{
   width: 100%;
   height: 100%;
+}
+.map-descr {
+  color: white;
 }
 /* end contact section  */
 .copy {
@@ -574,29 +569,14 @@ hr {
 .copy a {
   color: rgb(173, 162, 162);
 }
-
 /* back arrow for another page */
-.fa-arrow-left {
-  font-size: 5rem;
-  padding: 2rem;
-  color: white;
-  margin: 2rem;
-  position: fixed;
-  transition: transform .5s ;
-  z-index: 5;
-  background-color: black;
-  border-radius: 50%;
-}
-.fa-arrow-left:hover {
-  transform: scale(110%);
-}
 
 @media (max-width: 1120px) {
   html {
     font-size: 45%;
   }
   .card-content p {
-    line-height: 5rem;
+    line-height: 2.8rem;
   }
   .contact-wrapper {
     flex-direction: column;
@@ -615,6 +595,9 @@ hr {
     height: 8px;
     margin: .7rem;
   }
+  .about-section {
+    padding: 2rem;
+  }
   .img-bar-btn {
     display: block;
   }
@@ -627,5 +610,3 @@ hr {
     font-size: 40%;
   }
 }
-
-

@@ -23,7 +23,7 @@ localStorage.setItem('animationDuration', '2.5s');     // * set timeout when use
 const logo = document.querySelector('.logo');
 const scrollDownAngle = document.querySelector('.down-angle');
 const startOpacity = 1;
-const endOpacity = 0.1;
+const endOpacity = 0.15;
 const factor = 0.1; 
 
 window.addEventListener('scroll', () => {
@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
       upScrollAngle.style.display = 'block'
       upScrollAngle.style.position = "fixed";
   } else {
-      upScrollAngle.style.position = "static";
+      upScrollAngle.style.display = "none"
   }
 }); // * up scroll angle 
 
@@ -67,7 +67,7 @@ const nav = document.querySelector('nav');
 function burgerMenu() {
   if (menu.classList.contains('open')) {
     menu.classList.remove('open');
-    spans[1].style.backgroundColor = '#CAD1CA';
+    spans[1].style.backgroundColor = '#C3C9C3';
   } else {
     menu.classList.add('open');
     spans[1].style.backgroundColor = 'black';
