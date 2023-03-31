@@ -1,13 +1,55 @@
-let title = document.getElementsByTagName('title')[0],
-  text = 'AllGeorgia',
-  interval = 100,
-  position = 0;
-  function animateTitle() {
-  let substring = text.substring(position, text.length) + ' ' + text.substring(0, position);
+const title = document.getElementsByTagName('title')[0];
+      text = `AllGeorgia_💙_`,
+      interval = 500,
+      position = 0,
+      count = 0,
+      animInterval = setInterval(animateTitle, interval);
+
+function animateTitle() {
+  let substring = text.substring(position) + ' ' + text.substring(0, position);
   title.innerHTML = substring;
   position = (position + 1) % text.length;
+  if (substring[substring.length - 1] === " ") { 
+    count++; 
+    if (count > 3) { 
+      clearInterval(animInterval);
+      setTimeout(() => {
+        position = 0;
+        count = 0;
+        animInterval = setInterval(animateTitle, interval); 
+      }, 3000); 
+    }
+  }
+} // * Browser txt animation
+  // check if the previous character is space " " and stop 3 times letter and start again
+
+
+const menu = document.querySelector('.menu'),
+      spans = menu.children,
+      nav = document.querySelector('nav');
+
+function burgerMenu() {
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    spans[1].style.backgroundColor = '#C3C9C3';
+  } else {
+    menu.classList.add('open');
+    spans[1].style.backgroundColor = 'black';
+  }
 }
-setInterval(animateTitle, interval); //browser tab animation
+menu.addEventListener('click', function() {
+  burgerMenu()
+}); 
+
+function toggleNav() {
+  nav.classList.toggle('open-menu');
+}
+function closeNav() { 
+  nav.classList.remove('open-menu');
+  burgerMenu()
+}
+// *  menu  end
+
 
 const bodyWrapper = document.querySelector('.body-wrapper')
 const loaderBox = document.querySelector('.loader-box')
@@ -69,30 +111,3 @@ window.addEventListener("scroll", () => {
       upScrollAngle.style.display = "none"
   }
 }); // * up scroll angle 
-
-
-const menu = document.querySelector('.menu');
-const spans = menu.children;
-const nav = document.querySelector('nav');
-
-function burgerMenu() {
-  if (menu.classList.contains('open')) {
-    menu.classList.remove('open');
-    spans[1].style.backgroundColor = '#C3C9C3';
-  } else {
-    menu.classList.add('open');
-    spans[1].style.backgroundColor = 'black';
-  }
-}
-menu.addEventListener('click', function() {
-  burgerMenu()
-}); 
-
-function toggleNav() {
-  nav.classList.toggle('open-menu');
-}
-function closeNav() { 
-  nav.classList.remove('open-menu');
-  burgerMenu()
-}
-// *  menu  end
