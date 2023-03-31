@@ -1,3 +1,14 @@
+let title = document.getElementsByTagName('title')[0],
+  text = 'AllGeorgia',
+  interval = 100,
+  position = 0;
+  function animateTitle() {
+  let substring = text.substring(position, text.length) + ' ' + text.substring(0, position);
+  title.innerHTML = substring;
+  position = (position + 1) % text.length;
+}
+setInterval(animateTitle, interval); //browser tab animation
+
 const bodyWrapper = document.querySelector('.body-wrapper')
 const loaderBox = document.querySelector('.loader-box')
 
